@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swapee-Reliable Barter Trade website. Home. </title>
+    <title>About Us</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,18 @@
         rel="stylesheet">
     <style>
         .title,
-        .footer-logo {
+        .footer-logo,
+        .get-started {
             color: #FFC300;
         }
 
+        body {
+            background-image: url(Assets/mona-eendra-vC8wj_Kphak-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
         .title,
-        h1,
         .footer-logo {
             font-family: 'Dancing Script';
         }
@@ -31,44 +37,8 @@
         .signup-button {
             background-color: #FFC300;
         }
-
-        .hero-homepage {
-            background-image: url(Assets/mona-eendra-vC8wj_Kphak-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-
-        }
-
-        .grid img .grid-item {
-            grid-template-columns: 1fr;
-            width: 100%;
-            height: auto;
-            max-height: 150px;
-            gap: 16px;
-            padding: 16px;
-            margin: auto;
-
-
-        }
-
-        @media (min-width:640px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-        }
-
-        @media (min-width:1024px) {
-            .grid {
-
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
     </style>
-
-
 </head>
-
 
 <body>
     <nav class="bg-black shadow-md w-full md:h-25 h-auto fixed top-0">
@@ -117,73 +87,63 @@
 
 
         </div>
-        </div>
+
     </nav>
 
     <div>
         <main>
-            <section class="hero-homepage h-auto md:h-150 w-100% space-y-0 mb-0 py-20">
-                <h1 class=" text-7xl text-center font-bold py-20 mb-0 ">Welcome to Swapee </h1>
-                <p class="text-xl text-black italic text-center mt-0 ">The place where one's man trash is Another's Gold
-                </p>
-                <p class="text-center mb-10 mt-8 max-w-xl mx-auto ">Mission: At Swapee, we value the planet. Every year,
-                    millions of tonnes of waste is generated worlwide. To reduce this, we, a group
-                    of passionate environmentalists created this website, where anyone can barter items and give out
-                    items they no longer need. Join us to
-                    build a more sustainable planet.
-                </p>
+            <section class=" h-auto md:h-150 w-100% space-y-0 mb-0 ">
 
-                <a href="About.html">
-                    <button
-                        class="text-white text-xl bg-black justify-center rounded-md object-center cursor-pointer w-60 h-10 block m-auto ">
-                        Learn How It Works!
-                    </button>
-                </a>
-                <h2 class="text-2xl text-center mt-3 animate:pulse ">Explore our categories below!</h2>
+                <div class="pt-30 pb-0 mb-0">
+                    <h1 class="font-bold text-2xl text-center">
+                        Our Mission:
+                    </h1>
+                    <p class="text-center mb-10 mt-2 max-w-xl mx-auto ">
+                        Every year millions of tonnes of waste are generated around the world. At Swapee, we decided to
+                        come
+                        up with a way to curb this.
+                        We aim to reduce waste production around the world by fostering a community of barter trading
+                        and a
+                        platform for easier charity donations.
+                        In a world of overproduction and consumption, Swapee aims to counter this by creating an easier
+                        way
+                        for people to give out items they
+                        no longer need in exchange for items they need.
+                    </p>
+                </div>
+
+                <div class="mt-0 pt-0 space-y-0">
+
+
+                    <h1 class="text-xl font-bold text-center">How it Works</h1>
+
+                    <ul class="list-disc flex flex-col justify-center object-center items-center py-4">
+                        <li>Sign Up by clicking "Get Started" button below</li>
+                        <li>Select preferred category</li>
+                        <li>Add items you want to exchange to your profile</li>
+                        <li>Find items you'd like in exchange and add to cart </li>
+                        <li>Wait for feedback from trader</li>
+                        <li>If it's a match, you will be put in contact with other party</li>
+                    </ul>
+
+                </div>
+                <p class="text-xl font-bold text-center">Join us In reducing worldwide waste! Start bartering today!</p>
+
+                <button class=" block button bg-black rounded-lg w-40 object-center cursor-pointer block m-auto mt-5">
+                    <a href="signup.html" class="get-started text-xl">Get Started</a>
+                </button>
 
             </section>
-            <section class="categories">
-
-                <h3 class="text-center text-2xl text-black mt-3 mb-2"><u>Categories </u></h3>
-                <nav>
-
-                    <div class="grid md:grid-cols-2 justify-center gap-0 lg:m-10 mt-0 grid-item">
-                        <a href="Furniture.html" class=" text-black font-bold text-l grid-item py-6 ">
-                            <img class="w-90 h-80 hover:shadow-lg-amber-700 object-cover"
-                                src="Assets/ryan-riggins-9v7UJS92HYc-unsplash.jpg" alt="furniture">
-
-                            Furniture& Household Items</a>
-
-                        <a href="Electronics.html" class="text-black font-bold text-l  object-cover grid-item py-6">
-                            <img class="w-90 h-80 hover:shadow-lg-amber-700 object-cover"
-                                src="Assets/ady-teenagerinro-sQ0xXxQdfeY-unsplash.jpg" alt="Electronics">
-                            Electronics & Gadgets
-                        </a>
-                        <a href="Clothing.html" class="text-black font-bold text-l  object-cover grid-item py-6">
-                            <img class="w-90 h-80 hover:shadow-lg-amber-700 object-cover"
-                                src="Assets/junko-nakase-Q-72wa9-7Dg-unsplash.jpg" alt="Clothing">
-
-                            Clothing& Accessories </a>
-
-                        <a href="Entertainment.html" class="ext-black font-bold text-l  object-cover grid-item py-6">
-                            <img class="w-90 h-80 hover:shadow-lg-amber-700 object-cover"
-                                src="Assets/elza-kurbanova-f8MLY_HKwqQ-unsplash.jpg" alt="Entertainment">
-                            Entertainment(Books,Albums,Games)
-                        </a>
-                        <a href="Other.html" class="text-black font-bold text-l  object-cover grid-item py-5">
-                            <img class="w-90 h-80 hover:shadow-lg-amber-700 object-cover"
-                                src="Assets/ruoyu-li-y9LIQmxqkNE-unsplash.jpg" alt="Other">
-
-                            Other Items </a>
-
-                    </div>
-                </nav>
-            </section>
-
         </main>
+    </div>
 
+
+
+
+    <div>
         <footer class="bg-black rounded-lg shadow-sm w-100% text-white">
-            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+
+            <div class="w-full max-w-screen-xl mx-auto mt-15 p-4 md:py-5">
                 <a href="home.html" class="flex items-center mb-4 sm:mb-0 lg:space-x-1"><!--rtl: adds styles in r to left mode- is only useful when building a site that needs 
                     to support both left to right and right to left layouts e.g Arabic-->
                     <span class=" footer-logo self-center text-3xl font-bold text-amber-700 px-0">Swapee</span>
@@ -263,12 +223,9 @@
                     class="hover:underline">Swapee™</a>. All Rights Reserved.</span>
 
 
+
+        </footer>
     </div>
-
-    </footer>
-
-
-
 
 </body>
 
