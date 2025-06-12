@@ -37,118 +37,137 @@
         .signup-button {
             background-color: #FFC300;
         }
+
+        .page-container{
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .content-wrap {
+            padding-bottom: 25rem;
+        
+        }
+        footer {
+            position:absolute;
+            bottom: 0;
+            width: 100%;
+        
+        }
     </style>
 </head>
 
 <body>
-    <nav class="bg-black shadow-md w-full md:h-25 h-auto fixed top-0">
-        <div class="container py-5 px-10 md:flex flex-row md:justify-between items-center md:space-x-5">
-            <a href="home.html" class=" title text-5xl font-weight-bold text-amber-700">Swapee</a>
+    <div class="page-container">
+        <nav class="bg-black shadow-md w-full md:h-25 h-auto fixed top-0">
+            <div class="container py-5 px-10 md:flex flex-row md:justify-between items-center md:space-x-5">
+                <a href="home.html" class=" title text-5xl font-weight-bold text-amber-700">Swapee</a>
 
-            <div class="buttons flex w-auto md:justify-between items-center space-x-3 md:space-x-5 lg:space-x-5">
-
-
-                <a href="signin.html"
-                    class="signin-button block text-center w-25 h-auto max-h-15 rounded-lg x-5 hover:cursor-pointer py-2 px-2">Log
-                    In </a>
+                <div class="buttons flex w-auto md:justify-between items-center space-x-3 md:space-x-5 lg:space-x-5">
 
 
-                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="click"
-                    class="text-black language-button hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
-                    type="button">Choose Language <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 1 4 4 4-4" />
-                    </svg>
-                </button>
+                    <a href="signin.html"
+                        class="signin-button block text-center w-25 h-auto max-h-15 rounded-lg x-5 hover:cursor-pointer py-2 px-2">Log
+                        In </a>
 
 
-                <div id="dropdownHover"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
-                        <li>
-                            EN
-                        </li>
-                        <li>
-                            FR
-                        </li>
-                        <li>
-                            SW
-                        </li>
-                        <li>
-                            DE
-                        </li>
-                    </ul>
-                </div> <!--requires JS may not work-->
+                    <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="click"
+                        class="text-black language-button hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+                        type="button">Choose Language <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
 
+
+                    <div id="dropdownHover"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+                            <li>
+                                EN
+                            </li>
+                            <li>
+                                FR
+                            </li>
+                            <li>
+                                SW
+                            </li>
+                            <li>
+                                DE
+                            </li>
+                        </ul>
+                    </div> <!--requires JS may not work-->
+
+
+
+                </div>
 
 
             </div>
 
+        </nav>
 
+        <div class="content-wrap">
+            <main>
+                <section class=" h-auto md:h-150 w-100% space-y-0 mb-0 mt-15 lg:mt-0 pb-20 md:pb-180 min-w-full">
+
+                    <div class="md:pt-40  pt-30 pb-0 mb-0">
+                        <h1 class="font-bold text-2xl text-center">
+                            Our Mission:
+                        </h1>
+                        <p class="text-center mb-10 mt-2 max-w-xl mx-auto ">
+                            Every year millions of tonnes of waste are generated around the world. At Swapee, we decided
+                            to
+                            come
+                            up with a way to curb this.
+                            We aim to reduce waste production around the world by fostering a community of barter
+                            trading
+                            and a
+                            platform for easier charity donations.
+                            In a world of overproduction and consumption, Swapee aims to counter this by creating an
+                            easier
+                            way
+                            for people to give out items they
+                            no longer need in exchange for items they need.
+                        </p>
+                    </div>
+   
+                    <div class="mt-0 pt-0 space-y-0">
+
+
+                        <h1 class="text-xl font-bold text-center">How it Works</h1>
+
+                        <ul class="list-disc flex flex-col justify-center object-center items-center py-4">
+                            <li>Sign Up by clicking "Get Started" button below</li>
+                            <li>Select preferred category</li>
+                            <li>Add items you want to exchange to your profile</li>
+                            <li>Find items you'd like in exchange and make an offer </li>
+                            <li>Wait for feedback from trader</li>
+                            <li>If it's a match, you will be put in contact with other party</li>
+                        </ul>
+
+                    </div>
+                    <div class="mt-0 mb-10">
+                        <p class="text-xl font-bold text-center">Join us In reducing worldwide waste! Start bartering
+                            today!</p>
+
+                        <button
+                            class=" block button bg-black rounded-lg w-40 object-center cursor-pointer block m-auto mt-2 mb-10">
+                            <a href="signup.html" class="get-started text-xl">Get Started</a>
+                        </button>
+                    </div>
+
+                </section>
+            </main>
         </div>
 
-    </nav>
-
-    <div>
-        <main>
-            <section class=" h-auto md:h-150 w-100% space-y-0 mb-0 ">
-
-                <div class="pt-30 pb-0 mb-0">
-                    <h1 class="font-bold text-2xl text-center">
-                        Our Mission:
-                    </h1>
-                    <p class="text-center mb-10 mt-2 max-w-xl mx-auto ">
-                        Every year millions of tonnes of waste are generated around the world. At Swapee, we decided to
-                        come
-                        up with a way to curb this.
-                        We aim to reduce waste production around the world by fostering a community of barter trading
-                        and a
-                        platform for easier charity donations.
-                        In a world of overproduction and consumption, Swapee aims to counter this by creating an easier
-                        way
-                        for people to give out items they
-                        no longer need in exchange for items they need.
-                    </p>
-                </div>
-
-                <div class="mt-0 pt-0 space-y-0">
-
-
-                    <h1 class="text-xl font-bold text-center">How it Works</h1>
-
-                    <ul class="list-disc flex flex-col justify-center object-center items-center py-4">
-                        <li>Sign Up by clicking "Get Started" button below</li>
-                        <li>Select preferred category</li>
-                        <li>Add items you want to exchange to your profile</li>
-                        <li>Find items you'd like in exchange and add to cart </li>
-                        <li>Wait for feedback from trader</li>
-                        <li>If it's a match, you will be put in contact with other party</li>
-                    </ul>
-
-                </div>
-                <p class="text-xl font-bold text-center">Join us In reducing worldwide waste! Start bartering today!</p>
-
-                <button class=" block button bg-black rounded-lg w-40 object-center cursor-pointer block m-auto mt-5">
-                    <a href="signup.html" class="get-started text-xl">Get Started</a>
-                </button>
-
-            </section>
-        </main>
-    </div>
-
-
-
-
-    <div>
         <footer class="bg-black rounded-lg shadow-sm w-100% text-white">
-
-            <div class="w-full max-w-screen-xl mx-auto mt-15 p-4 md:py-5">
+            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-6 mt-10 md:mb-0">
                 <a href="home.html" class="flex items-center mb-4 sm:mb-0 lg:space-x-1"><!--rtl: adds styles in r to left mode- is only useful when building a site that needs 
                     to support both left to right and right to left layouts e.g Arabic-->
                     <span class=" footer-logo self-center text-3xl font-bold text-amber-700 px-0">Swapee</span>
                 </a>
-                <div class="flex lg:space-x-100 space-x-10">
+                <div class="flex lg:space-x-70 space-x-10 md:flex-row justify-center md:pr-5">
                     <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0"><u> Help</u>
 
                         <li>
@@ -223,9 +242,10 @@
                     class="hover:underline">Swapee™</a>. All Rights Reserved.</span>
 
 
-
         </footer>
     </div>
+
+
 
 </body>
 
