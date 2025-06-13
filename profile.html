@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User.Profile</title>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swapee-Reliable Barter Trade website. Home. </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -32,16 +33,28 @@
 
         .signin-button,
         .language-button,
-        .signup-button {
+        .signup-button,
+        #default-sidebar {
             background-color: #FFC300;
         }
-        .language-button:hover{
+
+
+        .language-button:hover {
             cursor: pointer;
             background-color: white;
             outline-color: blue;
-        } 
-        body{
+        }
+
+        body {
             background-image: url(Assets/mona-eendra-vC8wj_Kphak-unsplash.jpg);
+        }
+
+         #menu-toggle {
+            display: none;
+        }
+
+        #menu-toggle:checked+label+div.sidebar{
+            display: flex;
         }
     </style>
 
@@ -52,7 +65,87 @@
 <body>
     <nav class="bg-black shadow-md w-full md:h-25 h-auto fixed top-0">
         <div class="container py-5 px-10 md:flex flex-row md:justify-between items-center md:space-x-5">
+
             <a href="home.html" class=" title text-5xl font-weight-bold text-amber-700">Swapee</a>
+            
+            
+
+            <div class="sidebar mt-50 hidden">
+                <aside id="default-sidebar"
+                    class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+                    aria-label="Sidebar">
+                   
+
+
+                    <div class="Sidebar px-3 py-4 overflow-y-auto h-auto mt-30">
+                        <ul class="space-y-2 font-medium">
+                            <li>
+                                <a href="home.html"
+                                    class="flex items-center p-2 rounded-lg text-black hover:bg-white group">
+                                    <svg class="w-5 h-5 text-black transition duration-75 group-hover:text-black"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z"
+                                                fill="#000000"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="ms-3">Home</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="flex items-center p-2 text-black rounded-lg  hover:bg-white group">
+                                    <svg class="shrink-0 w-5 h-5 text-black transition duration-75  group-hover:text-black"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
+                                    </svg>
+                                    <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                                    <span
+                                        class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="signin.html"
+                                    class="flex items-center p-2 text-black rounded-lg  hover:bg-white group">
+                                    <svg class="shrink-0 w-5 h-5 text-black transition duration-75  group-hover:text-black"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 18 16">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+                                    </svg>
+
+                                    <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="signup.html"
+                                    class="flex items-center p-2 text-black rounded-lg hover:bg-white group">
+                                    <svg class="shrink-0 w-5 h-5 text-black transition duration-75  group-hover:text-black"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
+                                        <path
+                                            d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
+                                        <path
+                                            d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z" />
+                                    </svg>
+                                    <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
 
             <div class="buttons flex w-auto md:justify-between items-center space-x-3 md:space-x-5 lg:space-x-5">
 
@@ -86,11 +179,21 @@
                 </div> <!--requires JS may not work-->
                 <div class="profile ml-10 text-white">
                     <a href="profile.html">
-                    <i class="fa-solid fa-user mr-3" style="color: #FFC300;"></i>Profile
+                        <i class="fa-solid fa-user mr-3" style="color: #FFC300;"></i>Profile
 
                     </a>
 
                 </div>
+                 
+                   <input type="checkbox" id="menu-toggle" class="peer hidden">
+                    <label for="menu-toggle" class="cursor-pointer p-2 rounded-md hover:bg-gray-100 mr-5">
+                        
+                        <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            
+                            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                      </svg>
+                    </label>
 
 
 
@@ -101,254 +204,290 @@
         </div>
     </nav>
 
+
+
+
+
+
     <form class="space-y-8 container m-auto divide-y divide-gray-200 mt-30">
-  <div class="space-y-8 divide-y divide-gray-200">
-    <div>
-      <div>
-        <h3 class="text-lg leading-6 font-medium text-black">Profile</h3>
-        <p class="mt-1 text-sm text-black">This information will be displayed publicly so be careful what you share.</p>
-      </div>
+        <div class="space-y-8 divide-y divide-gray-200">
+            <div>
+                <div>
+                    <h3 class="text-lg leading-6 font-medium text-black">Profile</h3>
+                    <p class="mt-1 text-sm text-black">This information will be displayed publicly so be careful what
+                        you share.</p>
+                </div>
 
-      <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-        <div class="sm:col-span-4">
-          <label for="username" class="block text-sm font-medium text-black"> Username </label>
-          <div class="mt-1 flex rounded-md shadow-sm">
-            <input type="text" name="username" id="username" autocomplete="username" class="flex-1 focus:ring-black focus:border-gray-400 block w-50 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
-          </div>
-        </div>
+                <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-4">
+                        <label for="username" class="block text-sm font-medium text-black"> Username </label>
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                            <input type="text" name="username" id="username" autocomplete="username"
+                                class="flex-1 focus:ring-black focus:border-gray-400 block w-50 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                        </div>
+                    </div>
 
-        <div class="sm:col-span-6">
-          <label for="about" class="block text-sm font-medium text-gray-900"> About </label>
-          <div class="mt-1">
-            <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-black focus:border-black block w-full sm:text-sm border border-black rounded-md"></textarea>
-          </div>
-          <p class="mt-2 text-sm text-black">Write a few sentences about yourself.</p>
-        </div>
+                    <div class="sm:col-span-6">
+                        <label for="about" class="block text-sm font-medium text-gray-900"> About </label>
+                        <div class="mt-1">
+                            <textarea id="about" name="about" rows="3"
+                                class="shadow-sm focus:ring-black focus:border-black block w-full sm:text-sm border border-black rounded-md"></textarea>
+                        </div>
+                        <p class="mt-2 text-sm text-black">Write a few sentences about yourself.</p>
+                    </div>
 
-        <div class="sm:col-span-6">
-          <label for="photo" class="block text-sm font-medium text-gray-700"> Photo </label>
-          <div class="mt-1 flex items-center">
-            <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-              <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </span>
-            <button type="button" class="ml-5 bg-white py-2 px-3 border border-black rounded-md shadow-sm text-sm leading-4 font-medium text-black cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Change</button>
-          </div>
-        </div>
+                    <div class="sm:col-span-6">
+                        <label for="photo" class="block text-sm font-medium text-gray-700"> Photo </label>
+                        <div class="mt-1 flex items-center">
+                            <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                                <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </span>
+                            <button type="button"
+                                class="ml-5 bg-white py-2 px-3 border border-black rounded-md shadow-sm text-sm leading-4 font-medium text-black cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">Change</button>
+                        </div>
+                    </div>
 
-        <div class="sm:col-span-6">
-          <label for="cover-photo" class="block text-sm font-medium text-gray-700"> Cover photo </label>
-          <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-            <div class="space-y-1 text-center">
-              <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              <div class="flex text-sm text-gray-600">
-                <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-black hover:text-black focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-black">
-                  <span>Upload a file</span>
-                  <input id="file-upload" name="file-upload" type="file" class="sr-only">
-                </label>
-                <p class="pl-1">or drag and drop</p>
-              </div>
-              <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pt-8">
-      <div>
-        <h3 class="text-lg leading-6 font-medium text-gray-900">Personal Information</h3>
-        <p class="mt-1 text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
-      </div>
-      <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-        <div class="sm:col-span-3">
-          <label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
-          <div class="mt-1">
-            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-
-        <div class="sm:col-span-3">
-          <label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
-          <div class="mt-1">
-            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-
-        <div class="sm:col-span-4">
-          <label for="email" class="block text-sm font-medium text-gray-700"> Email address </label>
-          <div class="mt-1">
-            <input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-
-        <div class="sm:col-span-3">
-          <label for="country" class="block text-sm font-medium text-gray-700"> Country </label>
-          <div class="mt-1">
-            <select id="country" name="country" autocomplete="country-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-              <option>Kenya</option>
-                <option>United States</option>
-
-              <option>Canada</option>
-              
-              <option>Tanzania</option>
-              <option>Uganda</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="sm:col-span-6">
-          <label for="street-address" class="block text-sm font-medium text-gray-700"> Street address </label>
-          <div class="mt-1">
-            <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="city" class="block text-sm font-medium text-gray-700"> City </label>
-          <div class="mt-1">
-            <input type="text" name="city" id="city" autocomplete="address-level2" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="region" class="block text-sm font-medium text-gray-700"> State / Province </label>
-          <div class="mt-1">
-            <input type="text" name="region" id="region" autocomplete="address-level1" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label for="postal-code" class="block text-sm font-medium text-gray-700"> ZIP / Postal code </label>
-          <div class="mt-1">
-            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pt-8">
-      <div>
-        <h3 class="text-lg leading-6 font-medium text-gray-900">Notifications</h3>
-        <p class="mt-1 text-sm text-gray-500">We'll always let you know about important changes, but you pick what else you want to hear about.</p>
-      </div>
-      <div class="mt-6">
-        <fieldset>
-          <legend class="text-base font-medium text-gray-900">By Email</legend>
-          <div class="mt-4 space-y-4">
-            <div class="relative flex items-start">
-              <div class="flex items-center h-5">
-                <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-              </div>
-              <div class="ml-3 text-sm">
-                <label for="comments" class="font-medium text-gray-700">Messages</label>
-                <p class="text-gray-500">Get notified when someone sends you an exchange request.</p>
-              </div>
-            </div>
-            <div class="relative flex items-start">
-              <div class="flex items-center h-5">
-                <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-              </div>
-              <div class="ml-3 text-sm">
-                <label for="candidates" class="font-medium text-gray-700">Matches</label>
-                <p class="text-gray-500">Get notified of your matches</p>
-              </div>
-            </div>
-            <div class="relative flex items-start">
-              <div class="flex items-center h-5">
-                <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-              </div>
-              <div class="ml-3 text-sm">
-                <label for="offers" class="font-medium text-gray-700">Offers</label>
-                <p class="text-gray-500">Get notified of any offers.</p>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="mt-6">
-          <div>
-            <legend class="text-base font-medium text-gray-900">Push Notifications</legend>
-            <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p>
-          </div>
-          <div class="mt-4 space-y-4">
-            <div class="flex items-center">
-              <input id="push-everything" name="push-notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
-              <label for="push-everything" class="ml-3 block text-sm font-medium text-gray-700"> Everything </label>
-            </div>
-            <div class="flex items-center">
-              <input id="push-email" name="push-notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
-              <label for="push-email" class="ml-3 block text-sm font-medium text-gray-700"> Same as email </label>
-            </div>
-            <div class="flex items-center">
-              <input id="push-nothing" name="push-notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
-              <label for="push-nothing" class="ml-3 block text-sm font-medium text-gray-700"> No push notifications </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-    </div>
-  </div>
-
-  <div class="pt-5">
-    <div class="flex justify-end">
-      <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black mb-10">Cancel</button>
-      <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-black hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black mb-10">Save</button>
-    </div>
-  </div>
-</form>
-<footer class="bg-black rounded-lg shadow-sm w-100% text-white">
-            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <a href="home.html" class="flex items-center mb-4 sm:mb-0 lg:space-x-1"><!--rtl: adds styles in r to left mode- is only useful when building a site that needs 
-                    to support both left to right and right to left layouts e.g Arabic-->
-                    <span class=" footer-logo self-center text-3xl font-bold text-amber-700 px-0">Swapee</span>
-                </a>
-                <div class="flex lg:space-x-70 space-x-10">
-                    <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0"><u> Help</u>
-
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Help Center</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Trading</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Report an Issue</a>
-                        </li>
-                    </ul>
-
-                    <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0 "><u> Policies and
-                            Terms of Use</u>
-
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Terms& Policies of Our Community</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">Being a responsible trader</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Trust &Safety</a>
-                        </li>
-                    </ul>
-                    <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0 ">
-
-
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">12345 Ring Rd Westlands, Nairobi</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline me-4 md:me-6">P.O Box 43302-00395</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Kenya</a>
-                        </li>
-                    </ul>
+                    <div class="sm:col-span-6">
+                        <label for="cover-photo" class="block text-sm font-medium text-gray-700"> Cover photo </label>
+                        <div
+                            class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                            <div class="space-y-1 text-center">
+                                <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none"
+                                    viewBox="0 0 48 48" aria-hidden="true">
+                                    <path
+                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <div class="flex text-sm text-gray-600">
+                                    <label for="file-upload"
+                                        class="relative cursor-pointer bg-white rounded-md font-medium text-black hover:text-black focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-black">
+                                        <span>Upload a file</span>
+                                        <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                    </label>
+                                    <p class="pl-1">or drag and drop</p>
+                                </div>
+                                <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <div class="pt-8">
+                <div>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">Personal Information</h3>
+                    <p class="mt-1 text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm font-medium text-gray-700"> First name </label>
+                        <div class="mt-1">
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
 
+                    <div class="sm:col-span-3">
+                        <label for="last-name" class="block text-sm font-medium text-gray-700"> Last name </label>
+                        <div class="mt-1">
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700"> Email address </label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" autocomplete="email"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="country" class="block text-sm font-medium text-gray-700"> Country </label>
+                        <div class="mt-1">
+                            <select id="country" name="country" autocomplete="country-name"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                <option>Kenya</option>
+                                <option>United States</option>
+
+                                <option>Canada</option>
+
+                                <option>Tanzania</option>
+                                <option>Uganda</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-6">
+                        <label for="street-address" class="block text-sm font-medium text-gray-700"> Street address
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="street-address" id="street-address" autocomplete="street-address"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="city" class="block text-sm font-medium text-gray-700"> City </label>
+                        <div class="mt-1">
+                            <input type="text" name="city" id="city" autocomplete="address-level2"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="region" class="block text-sm font-medium text-gray-700"> State / Province </label>
+                        <div class="mt-1">
+                            <input type="text" name="region" id="region" autocomplete="address-level1"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="postal-code" class="block text-sm font-medium text-gray-700"> ZIP / Postal code
+                        </label>
+                        <div class="mt-1">
+                            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8">
+                <div>
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">Notifications</h3>
+                    <p class="mt-1 text-sm text-gray-500">We'll always let you know about important changes, but you
+                        pick what else you want to hear about.</p>
+                </div>
+                <div class="mt-6">
+                    <fieldset>
+                        <legend class="text-base font-medium text-gray-900">By Email</legend>
+                        <div class="mt-4 space-y-4">
+                            <div class="relative flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="comments" name="comments" type="checkbox"
+                                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="comments" class="font-medium text-gray-700">Messages</label>
+                                    <p class="text-gray-500">Get notified when someone sends you an exchange request.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="candidates" name="candidates" type="checkbox"
+                                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="candidates" class="font-medium text-gray-700">Matches</label>
+                                    <p class="text-gray-500">Get notified of your matches</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="offers" name="offers" type="checkbox"
+                                        class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="offers" class="font-medium text-gray-700">Offers</label>
+                                    <p class="text-gray-500">Get notified of any offers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mt-6">
+                        <div>
+                            <legend class="text-base font-medium text-gray-900">Push Notifications</legend>
+                            <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <div class="flex items-center">
+                                <input id="push-everything" name="push-notifications" type="radio"
+                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                <label for="push-everything" class="ml-3 block text-sm font-medium text-gray-700">
+                                    Everything </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="push-email" name="push-notifications" type="radio"
+                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                <label for="push-email" class="ml-3 block text-sm font-medium text-gray-700"> Same as
+                                    email </label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="push-nothing" name="push-notifications" type="radio"
+                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                <label for="push-nothing" class="ml-3 block text-sm font-medium text-gray-700"> No push
+                                    notifications </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-5">
+            <div class="flex justify-end">
+                <button type="button"
+                    class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black mb-10">Cancel</button>
+                <button type="submit"
+                    class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-black hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black mb-10">Save</button>
+            </div>
+        </div>
+    </form>
+
+    <footer class="bg-black rounded-lg shadow-sm w-100% text-white">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <a href="home.html" class="flex items-center mb-4 sm:mb-0 lg:space-x-1"><!--rtl: adds styles in r to left mode- is only useful when building a site that needs 
+                    to support both left to right and right to left layouts e.g Arabic-->
+                <span class=" footer-logo self-center text-3xl font-bold text-amber-700 px-0">Swapee</span>
+            </a>
+            <div class="flex lg:space-x-70 space-x-10">
+                <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0"><u> Help</u>
+
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Trading</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Report an Issue</a>
+                    </li>
+                </ul>
+
+                <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0 "><u> Policies and
+                        Terms of Use</u>
+
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Terms& Policies of Our Community</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Being a responsible trader</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Trust &Safety</a>
+                    </li>
+                </ul>
+                <ul class=" mt-6 mb-6 text-sm font-medium text-white sm:mb-0 ">
+
+
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">12345 Ring Rd Westlands, Nairobi</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">P.O Box 43302-00395</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Kenya</a>
+                    </li>
+                </ul>
+            </div>
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="#" aria-label="Facebook" class="text-white hover:text-white"><svg class="h-6 w-6"
                         fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -378,13 +517,14 @@
             <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
             <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="index.html"
                     class="hover:underline">Swapee™</a>. All Rights Reserved.</span>
+        </div>
 
 
-    </div>
 
     </footer>
 
 
 
 </body>
+
 </html>
